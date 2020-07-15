@@ -14,6 +14,7 @@ random useful functions
 
 * [`obj arrays`](#obj-arrays)
   * [`fn all(fn, arr)`](#fn-arraysall)
+  * [`fn any(fn, arr)`](#fn-arraysany)
 * [`obj container`](#obj-container)
   * [`fn array(x)`](#fn-containerarray)
   * [`fn keyValuePairs(o)`](#fn-containerkeyvaluepairs)
@@ -40,11 +41,31 @@ random useful functions
 all(fn, arr)
 ```
 
-`all` returns true when the function provided returns true for all values in an array
+`all` passes each element of the collection to the given function.
+`all` returns true if the function provided never returns false.
 
 > `PARAMETERS`
 
-* `fn (function(x) bool)` - where `x` is the value of from the array; and a boolean is returned
+* `fn (function(x) bool)` - where `x` is a value from the array; and a boolean is returned
+* `o (object)` - the object to evaluate
+
+> `RETURNS`
+
+`bool`
+
+
+### fn arrays.any
+
+```ts
+any(fn, arr)
+```
+
+`any` passes each element of the collection to the given function.
+`any` returns true if the function provided ever returns true.
+
+> `PARAMETERS`
+
+* `fn (function(x) bool)` - where `x` is a value from the array; and a boolean is returned
 * `o (object)` - the object to evaluate
 
 > `RETURNS`
