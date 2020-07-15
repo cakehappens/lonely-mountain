@@ -2,10 +2,10 @@
 permalink: /
 ---
 
-# package lonely-mountain
+# package lm
 
 ```jsonnet
-local lonely-mountain = import "github.com/cakehappens/lonely-mountain/main.libsonnet"
+local lm = import "github.com/cakehappens/lonely-mountain/main.libsonnet"
 ```
 
 random useful functions

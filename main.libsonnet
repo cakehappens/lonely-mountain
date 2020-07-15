@@ -2,7 +2,7 @@ local d = import "doc-util/main.libsonnet";
 
 {
   '#': d.pkg(
-    name='lonely-mountain',
+    name='lm',
     url='github.com/cakehappens/lonely-mountain/main.libsonnet',
     help='random useful functions',
   ),
