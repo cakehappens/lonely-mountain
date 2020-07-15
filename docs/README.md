@@ -12,38 +12,44 @@ random useful functions
 
 ## Index
 
-* [`obj assertion`](#obj-assertion)
-  * [`fn arrayOfType(arr, arr)`](#fn-assertionarrayoftype)
+* [`obj arrays`](#obj-arrays)
+  * [`fn all(fn, arr)`](#fn-arraysall)
 * [`obj container`](#obj-container)
   * [`fn array(x)`](#fn-containerarray)
   * [`fn keyValuePairs(o)`](#fn-containerkeyvaluepairs)
 * [`obj encoding`](#obj-encoding)
   * [`fn manifestJsonOneLine(o)`](#fn-encodingmanifestjsononeline)
 * [`obj obj`](#obj-obj)
-  * [`fn objectValues(o)`](#fn-objobjectvalues)
+  * [`fn all(fn, o)`](#fn-objall)
+  * [`fn allFields(fn, o)`](#fn-objallfields)
+  * [`fn values(o)`](#fn-objvalues)
+* [`obj reflection`](#obj-reflection)
+  * [`fn arrayOfType(arr, arr)`](#fn-reflectionarrayoftype)
 * [`obj strings`](#obj-strings)
   * [`fn capitalize(o)`](#fn-stringscapitalize)
 
 ## Fields
 
-## obj assertion
+## obj arrays
 
 
 
-### fn assertion.arrayOfType
+### fn arrays.all
 
 ```ts
-arrayOfType(arr, arr)
+all(fn, arr)
 ```
 
-`arrayOfType` takes an array and a type as a string (see [std.type(x)](https://jsonnet.org/ref/stdlib.html)).
-Returns true if all elements in the array of the desired type, otherwise false.
+`all` returns true when the function provided returns true for all values in an array
 
-Example usage: 
+> `PARAMETERS`
 
-```jsonnet
-assert assertion.arrayOfType(["a", 1], "string") : "not all items are strings";
-```
+* `fn (function(x) bool)` - where `x` is the value of from the array; and a boolean is returned
+* `o (object)` - the object to evaluate
+
+> `RETURNS`
+
+`bool`
 
 
 ## obj container
@@ -87,13 +93,69 @@ manifestJsonOneLine(o)
 
 
 
-### fn obj.objectValues
+### fn obj.all
 
 ```ts
-objectValues(o)
+all(fn, o)
 ```
 
-`objectValues` takes an object and returns an array where each element of the array are the field _values_ in the object.
+`all` returns true when the function provided returns true for all values in an object
+
+> `PARAMETERS`
+
+* `fn (function(x) bool)` - where `x` is the value of a field in the root object; and a boolean is returned
+* `o (object)` - the object to evaluate
+
+> `RETURNS`
+
+`bool`
+
+
+### fn obj.allFields
+
+```ts
+allFields(fn, o)
+```
+
+`allFields` returns true when the function provided returns true for all field names in an object
+
+> `PARAMETERS`
+
+* `fn (function(x) bool)` - where `x` is the field name of a field in the root object; and a boolean is returned
+* `o (object)` - the object to evaluate
+
+> `RETURNS`
+
+`bool`
+
+
+### fn obj.values
+
+```ts
+values(o)
+```
+
+`values` takes an object and returns an array where each element of the array are the field _values_ in the object.
+
+
+## obj reflection
+
+
+
+### fn reflection.arrayOfType
+
+```ts
+arrayOfType(arr, arr)
+```
+
+`arrayOfType` takes an array and a type as a string (see [std.type(x)](https://jsonnet.org/ref/stdlib.html)).
+Returns true if all elements in the array of the desired type, otherwise false.
+
+Example usage: 
+
+```jsonnet
+assert assertion.arrayOfType(["a", 1], "string") : "not all items are strings";
+```
 
 
 ## obj strings

@@ -6,10 +6,10 @@ local d = import "doc-util/main.libsonnet";
     url='github.com/cakehappens/lonely-mountain/main.libsonnet',
     help='random useful functions',
   ),
-
-  container: (import "./container.libsonnet"),
-  encoding: (import "./encoding.libsonnet"),
-  obj: (import "./obj.libsonnet"),
-  assertion: (import "./assertion.libsonnet"),
-  strings: (import "./strings.libsonnet"),
-}
+} +
+  (import "./container.libsonnet") +
+  (import "./encoding.libsonnet") +
+  (import "./obj.libsonnet") +
+  (import "./reflection.libsonnet") +
+  (import "./strings.libsonnet") +
+  (import "./arrays.libsonnet")
