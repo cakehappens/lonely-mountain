@@ -32,16 +32,16 @@
   <a href="#install">Install</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
+  <a href="#related-inspiration">Related</a> •
   <a href="#credits">License</a> •
   <a href="#license">License</a>
 </p>
 
-## Introduction
+## 👋 Introduction
 
 `Lonely Mountain` is home to some artisanally crafted functions for use in your jsonnet! It's a natural extension to the standard library.
 
-## Install
+## ⚡️ Install
 
 Install this library in your own project with jsonnet-bundler (the jsonnet package manager):
 
@@ -59,7 +59,7 @@ In order to update the lonely-mountain dependency, simply use the jsonnet-bundle
 $ jb update
 ```
 
-## How To Use
+## 📖 How To Use
 
 ```jsonnet
 local lm = import "github.com/cakehappens/lonely-mountain/main.libsonnet"
@@ -71,9 +71,9 @@ lm.strings.capitalize("hello")
 Hello
 ```
 
-You can find more information in [the docs](./docs)!
+You can find more information in [the docs 📖](./docs)!
 
-## Lore
+## 🏔️ Lore
 
 > The Lonely Mountain, or Erebor, was a mountain in the north-east of Rhovanion. It was the source of the river Running, and a major Dwarven stronghold, the Kingdom under the Mountain at the end of the Third Age and well into the Fourth.
 
@@ -86,14 +86,16 @@ You can find more information in [the docs](./docs)!
 
 Ref: [tolkien gateway](http://tolkiengateway.net/wiki/Lonely_Mountain)
 
-## Related
+## 💕 Related & Inspiration
 
 [![Alt text](./assets/lonely-mountain-yt-thumb.png)](https://www.youtube.com/watch?v=RI3fkqA9-IA)
 
-## Credits
+## 📜 Credits
 
 <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-## License
+## ⚖️ License
 
-Apache 2.0
+<a href="./LICENSE">
+    <img src="https://img.shields.io/github/license/cakehappens/lonely-mountain">
+  </a>
