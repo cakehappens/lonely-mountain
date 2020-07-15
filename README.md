@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <br>
-  <a href="http://github.com/cakehappens/frosting"><img src="./assets/mountain.png" alt="lonely mountain" width="200px" /></a>
+  <a href="http://github.com/cakehappens/lonely-mountain"><img src="./assets/mountain.png" alt="lonely mountain" width="200px" /></a>
   <br>
   Lonely Mountain
   <br>
