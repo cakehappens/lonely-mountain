@@ -32,7 +32,7 @@
   <a href="#install">Install</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#credits">Credits</a> •
-  <a href="#related-inspiration">Related</a> •
+  <a href="#related--inspiration">Related</a> •
   <a href="#credits">License</a> •
   <a href="#license">License</a>
 </p>
