@@ -24,6 +24,7 @@ random useful functions
   * [`fn all(fn, o)`](#fn-objall)
   * [`fn allFields(fn, o)`](#fn-objallfields)
   * [`fn values(o)`](#fn-objvalues)
+  * [`fn valuesPruned(o)`](#fn-objvaluespruned)
 * [`obj reflection`](#obj-reflection)
   * [`fn arrayOfType(arr, arr)`](#fn-reflectionarrayoftype)
 * [`obj strings`](#obj-strings)
@@ -157,6 +158,15 @@ values(o)
 ```
 
 `values` takes an object and returns an array where each element of the array are the field _values_ in the object.
+
+
+### fn obj.valuesPruned
+
+```ts
+valuesPruned(o)
+```
+
+`valuesPruned` is shorthand for `std.prune(lm.object.values(o))`
 
 
 ## obj reflection

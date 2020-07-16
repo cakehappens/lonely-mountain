@@ -40,5 +40,12 @@ local d = import "doc-util/main.libsonnet";
       |||,
       [d.arg('fn', d.T.func), d.arg('o', d.T.object)]),
     allFields(fn, o):: $.arrays.all(fn, std.objectFields(o)),
+
+    '#valuesPruned': d.fn(
+      |||
+        `valuesPruned` is shorthand for `std.prune(lm.object.values(o))`
+      |||,
+      [d.arg('o', d.T.object)]),
+    valuesPruned(o):: std.prune(self.values(o))
   },
 }
