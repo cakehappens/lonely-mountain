@@ -48,7 +48,7 @@ Install this library in your own project with jsonnet-bundler (the jsonnet packa
 ```shell
 $ mkdir my-project; cd my-project
 $ jb init  # Creates the initial/empty `jsonnetfile.json`
-$ jb install github.com/cakehappens/lonely-mountain # Creates `vendor/` & `jsonnetfile.lock.json`, and fills in `jsonnetfile.json`
+$ jb install github.com/cakehappens/lonely-mountain@main # Creates `vendor/` & `jsonnetfile.lock.json`, and fills in `jsonnetfile.json`
 ```
 
 > jb can be installed with `go get github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb`
