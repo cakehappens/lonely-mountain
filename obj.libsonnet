@@ -46,6 +46,21 @@ local d = import "doc-util/main.libsonnet";
         `valuesPruned` is shorthand for `std.prune(lm.object.values(o))`
       |||,
       [d.arg('o', d.T.object)]),
-    valuesPruned(o):: std.prune(self.values(o))
+    valuesPruned(o):: std.prune(self.values(o)),
+
+    '#keysAfterPrune': d.fn(
+      |||
+        `keysAfterPrune` is shorthand for `std.objectFields(std.prune(o))`
+      |||,
+      [d.arg('o', d.T.object)]),
+    keysAfterPrune(o):: std.objectFields(std.prune(o)),
+
+    '#lookup': d.fn(
+      |||
+        `lookup` retrieves the value of a single element from an object, given its field. If the given field does not exist, a the given default value is returned instead.
+      |||,
+      [d.arg('obj', d.T.object), d.arg('field', d.T.string), d.arg('default', d.T.any)],
+    ),
+    lookup(obj, field, default):: (if std.objectHas(obj, field) then obj[field] else default),
   },
 }

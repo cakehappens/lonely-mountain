@@ -1,7 +1,3 @@
-# 
-
-
-
 <h1 align="center">
   <br>
   <a href="http://github.com/cakehappens/lonely-mountain"><img src="./assets/mountain.png" alt="lonely mountain" width="200px" /></a>
@@ -62,7 +58,7 @@ $ jb update
 ## 📖 How To Use
 
 ```jsonnet
-local lm = import "github.com/cakehappens/lonely-mountain/main.libsonnet"
+local lm = import "github.com/cakehappens/lonely-mountain/main.libsonnet";
 
 lm.strings.capitalize("hello")
 ```

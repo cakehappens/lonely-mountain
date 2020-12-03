@@ -23,6 +23,8 @@ random useful functions
 * [`obj obj`](#obj-obj)
   * [`fn all(fn, o)`](#fn-objall)
   * [`fn allFields(fn, o)`](#fn-objallfields)
+  * [`fn keysAfterPrune(o)`](#fn-objkeysafterprune)
+  * [`fn lookup(obj, field, default)`](#fn-objlookup)
   * [`fn values(o)`](#fn-objvalues)
   * [`fn valuesPruned(o)`](#fn-objvaluespruned)
 * [`obj reflection`](#obj-reflection)
@@ -149,6 +151,24 @@ allFields(fn, o)
 > `RETURNS`
 
 `bool`
+
+
+### fn obj.keysAfterPrune
+
+```ts
+keysAfterPrune(o)
+```
+
+`keysAfterPrune` is shorthand for `std.objectFields(std.prune(o))`
+
+
+### fn obj.lookup
+
+```ts
+lookup(obj, field, default)
+```
+
+`lookup` retrieves the value of a single element from an object, given its field. If the given field does not exist, a the given default value is returned instead.
 
 
 ### fn obj.values
