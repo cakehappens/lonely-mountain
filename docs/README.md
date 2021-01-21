@@ -25,6 +25,7 @@ random useful functions
   * [`fn allFields(fn, o)`](#fn-objallfields)
   * [`fn keysAfterPrune(o)`](#fn-objkeysafterprune)
   * [`fn lookup(obj, field, default)`](#fn-objlookup)
+  * [`fn lookupAll(obj, field, default)`](#fn-objlookupall)
   * [`fn values(o)`](#fn-objvalues)
   * [`fn valuesPruned(o)`](#fn-objvaluespruned)
 * [`obj reflection`](#obj-reflection)
@@ -169,6 +170,15 @@ lookup(obj, field, default)
 ```
 
 `lookup` retrieves the value of a single element from an object, given its field. If the given field does not exist, a the given default value is returned instead.
+
+
+### fn obj.lookupAll
+
+```ts
+lookupAll(obj, field, default)
+```
+
+`lookupAll` is like `lookup` but includes hidden fields.
 
 
 ### fn obj.values

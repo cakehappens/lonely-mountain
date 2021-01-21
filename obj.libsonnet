@@ -62,5 +62,13 @@ local d = import "doc-util/main.libsonnet";
       [d.arg('obj', d.T.object), d.arg('field', d.T.string), d.arg('default', d.T.any)],
     ),
     lookup(obj, field, default):: (if std.objectHas(obj, field) then obj[field] else default),
+
+    '#lookupAll': d.fn(
+      |||
+        `lookupAll` is like `lookup` but includes hidden fields.
+      |||,
+      [d.arg('obj', d.T.object), d.arg('field', d.T.string), d.arg('default', d.T.any)],
+    ),
+    lookupAll(obj, field, default):: (if std.objectHasAll(obj, field) then obj[field] else default),
   },
 }
